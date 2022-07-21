@@ -12,23 +12,41 @@
 <body>
 <section class="page-authorization" id="login">
     <div class="page-authorization-container">
-        <form class="form" id="sign-up">
+        <form class="form" id="sing-up">
             <div class="form-container">
-                <h2 class="form__title">Sign Up</h2>
+                <h2 class="form__title">Sing Up</h2>
                 <div class="form__field">
                     <lable class="form__field-label">User name</lable>
-                    <input class="form__field-input" type="text" name=" email" placeholder="Type name..." autocomplete="off">
+                    <input class="form__field-input" type="text" name="name" placeholder="Type name..." autocomplete="off">
                 </div>                <div class="form__field">
                     <lable class="form__field-label">Email</lable>
-                    <input class="form__field-input" type="text" name=" name" placeholder="Type email..." autocomplete="off">
+                    <input class="form__field-input" type="text" name="email" placeholder="Type email..." autocomplete="off">
                 </div>                <div class="form__field">
                     <lable class="form__field-label">Password</lable>
-                    <input class="form__field-input" type="password" name=" name" placeholder="Type password...">
+                    <input class="form__field-input" type="password" name="password" placeholder="Type password...">
                 </div>
                 <button class="form__btn btn" type="submit">Accept</button>
             </div>
+            <p class="form__notice">Do you have an account? Try to <a href="#" class="form__link link-in">Sign-in</a></p>
+        </form>
+
+        <form class="form hide" id="sing-in">
+            <div class="form-container">
+                <h2 class="form__title">Sing In</h2>
+                <div class="form__field">
+                    <lable class="form__field-label">User name</lable>
+                    <input class="form__field-input" type="text" name="name" placeholder="Type name..." autocomplete="off">
+                </div>                    <div class="form__field">
+                <lable class="form__field-label">Password</lable>
+                <input class="form__field-input" type="password" name="password" placeholder="Type password...">
+            </div>
+                <button class="form__btn btn" type="submit">Accept</button>
+            </div>
+            <p class="form__notice">Don't have an account? Try to <a href="#" class="form__link link-up">Sign-up</a></p>
         </form>
     </div>
 </section>
+
+<script src="./src/main.js" type="module"></script>
 </body>
 </html>

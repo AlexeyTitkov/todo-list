@@ -1,4 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.btn {
+  width: 100%;
+  max-width: 160px;
+  color: #414141;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  background-color: #d6d6ee;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn:hover {
+  box-shadow: 0 0 4px 1px #414141;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.4rem;
+    max-width: 145px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .btn {
+    font-size: 1.4rem;
+    max-width: 130px;
+    height: 30px;
+  }
+}
+
 .form-container {
   padding: 10px 10px;
   max-width: 500px;
@@ -31,7 +64,7 @@
 }
 @media screen and (max-width: 450px) {
   .form__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .form__field {
@@ -53,7 +86,7 @@
 }
 @media screen and (max-width: 450px) {
   .form__field-label {
-    font-size: 2rem;
+    font-size: 1.5rem;
     height: 35px;
   }
 }
@@ -84,6 +117,33 @@
     font-size: 1.4rem;
   }
 }
+.form__btn {
+  color: #ffffff;
+  background-color: #6c85a2;
+  margin: 10px auto;
+}
+.form__notice {
+  color: #7a7a7a;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .form__notice {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form__notice {
+    font-size: 1.4rem;
+  }
+}
+.form__link {
+  color: #414141;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .page-authorization {
   height: 100%;
@@ -109,6 +169,10 @@ html * {
 }
 html body {
   height: 100%;
+}
+
+.hide {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

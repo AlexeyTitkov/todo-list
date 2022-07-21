@@ -3,6 +3,7 @@
   &-container {
     padding: 10px 10px;
     max-width: 500px;
+    //@include adaptive-width(500, 280);
     margin: 0 auto;
     border: 2px solid #7a7a7a;
     border-radius: 4.5%;
@@ -64,6 +65,7 @@
       border: 1.5px solid #d6e3ec;
       border-radius: 15px;
       padding: 0 10px;
+
       &:focus {
         outline: none;
         box-shadow: 0 0px 12px 1px #7a7a7a;
@@ -85,6 +87,35 @@
       }
 
     }
+  }
+  &__btn {
+    color: #ffffff;
+    background-color: #6c85a2;
+    margin: 10px auto;
+  }
+
+  &__notice {
+    color: #7a7a7a;
+    text-align: center;
+    font-size: $text-middle;
+    margin-top: 15px;
+
+    @include respond-to(middle) {
+      font-size: $sub-text-middle;
+
+    }
+
+    @include respond-to(mobile) {
+      font-size: $sub-text-mobile;
+    }
+  }
+
+    &__link {
+      color: #414141;
+      font-size: inherit;
+      text-decoration: none;
+      cursor: pointer;
+
   }
 }
 

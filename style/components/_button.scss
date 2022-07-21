@@ -1,4 +1,33 @@
- button {
-   color: red;
- }
+.btn {
+  width: 100%;
+  max-width: 160px;
+  color: #414141;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  background-color: #d6d6ee;
+  border: none;
+  cursor: pointer;
+  font-size: $sub-text-large;
 
+  &:active {
+    transform: scale(0.97);
+}
+
+  &:hover {
+    box-shadow: 0 0 4px 1px #414141;
+  }
+
+  @include respond-to(middle) {
+    font-size: $sub-text-middle;
+    max-width: 145px;
+    height: 35px;
+
+  }
+
+  @include respond-to(mobile) {
+    font-size: $sub-text-mobile;
+    max-width: 130px;
+    height: 30px;
+  }
+}
