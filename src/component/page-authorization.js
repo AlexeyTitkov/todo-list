@@ -19,10 +19,8 @@ class PageAuthorizationComponent extends Component {
 }
 
 function onChangeFormHandler(e) {
-    console.log(e)
     e.preventDefault()
     if (e.target.classList.contains('link-in')) {
-        console.log(this)
         this.singIn.show()
         this.singUp.hide()
     }else if (e.target.classList.contains('link-up')) {

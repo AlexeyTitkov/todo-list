@@ -3,14 +3,17 @@ export class Component {
         this.component = document.getElementById(id)
         this.init()
     }
+
     init(){}
+
+    onHide(){}
 
     hide () {
         this.component.classList.add('hide')
+        this.onHide()
     }
 
     show() {
-        console.log(this.component)
         this.component.classList.remove('hide')
     }
 }
