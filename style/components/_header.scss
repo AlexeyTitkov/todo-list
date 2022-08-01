@@ -1,0 +1,43 @@
+.header {
+  &-container {
+    background-color: #6c85a2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+  &__title {
+    font-size: $title-large;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    pointer-events: none;
+  }
+    @include respond-to(middle){
+      font-size: $title-middle;
+    }
+    @include respond-to(mobile){
+      font-size: $title-mobile;
+    }
+
+  &__btn {
+    color: #7a7a7a;
+    height: 50px;
+    background-color: white;
+
+
+    @include respond-to(middle){
+      font-size: $sub-text-middle;
+      max-width: 140px;
+      height: 40px;
+    }
+    @include respond-to(mobile) {
+      font-size: $sub-text-mobile;
+      max-width: 100px;
+      height: 30px;
+    }
+
+
+  }
+
+}

@@ -10,68 +10,125 @@
     <title>ToDo-List</title>
 </head>
 <body>
-<section class="page-authorization" id="login">
+<section class="page-authorization hide" id="login">
     <div class="page-authorization-container">
         <form class="form" id="sing-up">
             <div class="form-container">
                 <h2 class="form__title">Sing Up</h2>
                 <div class="form__field">
-                    <lable class="form__field-label">User name</lable>
+                    <label class="form__field-label">User name</label>
                     <input
                             class="form__field-input"
-                            type="text" name="name"
+                            type="text"
+                            name="name"
                             placeholder="Type name..."
                             autocomplete="off"
                     />
                 </div>
                 <div class="form__field">
-                    <lable class="form__field-label">Email</lable>
+                    <label class="form__field-label">Email</label>
                     <input
                             class="form__field-input"
                             type="text"
                             name="email"
-                            placeholder="Type email..."
-                            autocomplete="off">
-                </div>                <div class="form__field">
-                    <lable class="form__field-label">Password</lable>
+                            placeholder="Type @email..."
+                            autocomplete="off"
+                    />
+                </div>
+                <div class="form__field">
+                    <label class="form__field-label">Password</label>
                     <input
                             class="form__field-input"
-                            type="password" name="password"
-                            placeholder="Type password...">
+                            type="password"
+                            name="password"
+                            placeholder="Type password..."
+                    />
                 </div>
                 <button class="form__btn btn" type="submit">Accept</button>
             </div>
-            <p class="form__notice">Do you have an account? Try to <a href="#" class="form__link link-in">Sign-in</a></p>
+            <p class="form__notice">
+                Do you have an account? Try to
+                <a class="form__link link-in" href="#">Sing-in</a>
+            </p>
         </form>
 
         <form class="form hide" id="sing-in">
             <div class="form-container">
                 <h2 class="form__title">Sing In</h2>
                 <div class="form__field">
-                    <lable class="form__field-label">User name</lable>
+                    <label class="form__field-label">User name</label>
                     <input
                             class="form__field-input"
-                            type="text" name="name"
+                            type="text"
+                            name="name"
                             placeholder="Type name..."
                             autocomplete="off"
                     />
                 </div>
                 <div class="form__field">
-                <lable class="form__field-label">Password</lable>
+                    <label class="form__field-label">Password</label>
                     <input
                             class="form__field-input"
                             type="password"
                             name="password"
                             placeholder="Type password..."
-                            autocomplete="off"
-                />
-            </div>
+                    />
+                </div>
                 <button class="form__btn btn" type="submit">Accept</button>
             </div>
-            <p class="form__notice">Don't have an account? Try to <a href="#" class="form__link link-up">Sign-up</a></p>
+            <p class="form__notice">
+                Don't have an account? Try to
+                <a class="form__link link-up" href="#">Sing-up</a>
+            </p>
         </form>
+
     </div>
 </section>
+<section class="page-application" id="page-content">
+    <header class="header" id="header">
+        <div class="header-container">
+            <h1 class="header__title">ToDO List Application</h1>
+            <button class="header__btn btn">Logout</button>
+        </div>
+    </header>
+    <main class="page-application__content" id="main">
+        <h2 class="page-application__title">
+            Welcome,
+            <span class="page-application__title-name" id="welcome">???</span>,
+            here are your tasks
+        </h2>
+        <div class="page-application__controls">
+            <form class="page-application__form-search form-search" id="search">
+                <div class="form-search__field">
+                    <input class="form-search__field-input" type="search" name="title"
+                           placeholder="Search by title..." autocomplete="off"
+                    />
+                </div>
+                <div class="form-search__field">
+                    <select class="form-search__field-select" name="status">
+                        <option class="form-search__field-select-option" value="all">All</option>
+                        <option class="form-search__field-select-option" value="processing">In Processing</option>
+                        <option class="form-search__field-select-option" value="done">Completed</option>
+                    </select>
+                </div>
+            </form>
+            <div class="page-application__todos todos">
+                <div class="todos-container"></div>
+            </div>
+            <div class="page-application__theme theme">
+                <div class="theme__field">
+                    <select class="theme__field-select" name="theme" id="theme">
+                        <option class="theme__field-select-option" value="gray">Gray</option>
+                        <option class="theme__field-select-option" value="yellow">Yellow</option>
+                        <option class="theme__field-select-option" value="red">Red</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button class="page-application__btn btn"></button>
+    </main>
+</section>
+
 
 <script src="./src/main.js" type="module"></script>
 </body>
