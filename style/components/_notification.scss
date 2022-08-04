@@ -1,0 +1,32 @@
+.notification {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: azure;
+  width: 200px;
+  min-height: 60px;
+  border-radius: 15px;
+  border: 1px solid black;
+  background: #7a7a7a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  transform: translate(-50%, -100%);
+  animation: dropDown 1s ease;
+
+  &__ {
+    text-align: center;
+    font-size: $sub-text-middle;
+
+    @include respond-to(mobile) {
+      font-size: $sub-text-mobile;
+    }
+  }
+}
+
+@keyframes dropDown {
+  100%{
+    transform: translate(-50%, +50%);
+  }
+}

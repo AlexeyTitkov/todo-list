@@ -1,10 +1,14 @@
 import {Component} from "../core/component.js";
 import {Form} from "../core/form.js";
 import {Validator} from "../core/validators.js";
+import {pageApplication} from "../main.js";
+import {Storage} from "../core/storage.js";
 
 export class SingInComponent extends Component {
-    constructor(id) {
+    constructor(id, page) {
         super(id);
+        this.page = page;
+
     }
 
     init() {
@@ -14,6 +18,7 @@ export class SingInComponent extends Component {
             password: [Validator.required, Validator.isPasswordValid],
         })
     }
+
     onHide() {
         this.formData.clear()
     }
@@ -21,10 +26,16 @@ export class SingInComponent extends Component {
 
 function onSubmitHandler(e) {
     e.preventDefault()
-    if( this.formData.isValid()) {
+    if (this.formData.isValid()) {
         const formData = {
             ...this.formData.value()
         }
-        console.log(formData)
+        this.formData.clear()
+        const userId = Storage.enterTodoList(formData)
+        if (!userId) return
+        localStorage.setItem('selectedUserId', userId)
+        this.page.hide()
+        pageApplication.show()
+
     }
 }

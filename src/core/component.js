@@ -8,6 +8,9 @@ export class Component {
 
     onHide(){}
 
+    onShow(){}
+
+
     hide () {
         this.component.classList.add('hide')
         this.onHide()
@@ -15,5 +18,6 @@ export class Component {
 
     show() {
         this.component.classList.remove('hide')
+        this.onShow()
     }
 }
