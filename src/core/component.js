@@ -16,8 +16,8 @@ export class Component {
         this.onHide()
     }
 
-    show() {
+    show(text) {
         this.component.classList.remove('hide')
-        this.onShow()
+        this.onShow(text)
     }
 }
