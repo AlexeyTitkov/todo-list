@@ -75,6 +75,7 @@
     &-status {
       background-image: url("./../../assets/check.ico");
       background-color: white;
+      flex-shrink: 0;
     }
     &-edit {
       background-image: url("./../../assets/pencil.png");

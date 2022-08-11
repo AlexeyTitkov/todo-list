@@ -4,11 +4,12 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #414141;
+  background-color: rgba(65, 65, 65, 0.84);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+
 
   &-container {
     display: flex;
@@ -118,6 +119,17 @@
         @include respond-to(middle) {
           font-size: $sub-text-middle;
         }
+      }
+    }
+    &.invalid {
+      .modal__field-input,
+      .modal__field-textarea {
+        border: 1.5px solid #c91414;
+        box-shadow: 0 0 10px 1px #c91414;
+      }
+      .form__field-warning {
+        color: #c91414;
+        font-size: $sub-text-mobile;
       }
     }
   }

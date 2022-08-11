@@ -380,6 +380,7 @@
 .todos__item-status {
   background-image: url("./../../assets/check.ico");
   background-color: white;
+  flex-shrink: 0;
 }
 .todos__item-edit {
   background-image: url("./../../assets/pencil.png");
@@ -506,7 +507,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #414141;
+  background-color: rgba(65, 65, 65, 0.84);
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -610,6 +611,15 @@
   .modal__field-textarea::placeholder {
     font-size: 1.4rem;
   }
+}
+.modal__field.invalid .modal__field-input,
+.modal__field.invalid .modal__field-textarea {
+  border: 1.5px solid #c91414;
+  box-shadow: 0 0 10px 1px #c91414;
+}
+.modal__field.invalid .form__field-warning {
+  color: #c91414;
+  font-size: 1.4rem;
 }
 .modal__notice, .modal__notice-name {
   color: #7a7a7a;
