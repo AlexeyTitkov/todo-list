@@ -32,7 +32,7 @@ export class Storage {
         }
     }
 
-    static createPost(postData){
+    static createPost (postData){
         const users = JSON.parse(localStorage.getItem('users'))
         const currentUser = findUserData()
         if (!currentUser) return
