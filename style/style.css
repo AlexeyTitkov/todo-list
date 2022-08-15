@@ -404,6 +404,9 @@
 .todos__item_done .todos__item-status {
   background-color: #47b045;
 }
+.todos-notice {
+  font-size: 2rem;
+}
 
 .page-application__title {
   color: #7a7a7a;
