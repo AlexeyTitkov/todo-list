@@ -1,7 +1,6 @@
 import {Component} from "../core/component.js";
-import {createPostFormModal, todoInfoModal} from "../main.js";
+import {confirmActionModal, createPostFormModal, formEditPostModal, todoInfoModal} from "../main.js";
 import {renderTodos} from "../template/render-post.js";
-
 
 export class PageApplication extends Component {
     constructor(id, pageAuthorization) {
@@ -44,4 +43,11 @@ function onTodoHandler(e) {
         todoInfoModal.show(todoId)
     }
 
+    if(e.target.classList.contains('todos__item-remove')) {
+        confirmActionModal.show(todoId)
+    }
+
+    if(e.target.classList.contains('todos__item-edit')) {
+        formEditPostModal.show(todoId)
+    }
 }
