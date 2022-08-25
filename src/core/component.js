@@ -10,7 +10,6 @@ export class Component {
 
     onShow(){}
 
-
     hide () {
         this.component.classList.add('hide')
         this.onHide()

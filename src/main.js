@@ -6,6 +6,7 @@ import {TodoInfoModal} from "./component/modals/todo-info-modal.js";
 import {ConfirmActionModal} from "./component/modals/confirm-action-modal.js";
 import {FormEditPostModal} from "./component/modals/form-edit-post-modal.js";
 
+
 const login = new PageAuthorizationComponent('login')
 export const pageApplication = new PageApplication('page-content', login)
 export const notification = new Notification('notification')

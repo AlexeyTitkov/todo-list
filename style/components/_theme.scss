@@ -1,11 +1,11 @@
 .theme {
   &__field {
     height: 45px;
-    @include respond-to(middle){
-    height: 30px;
+    @include respond-to(middle) {
+      height: 30px;
     }
 
-    @include respond-to(mobile){
+    @include respond-to(mobile) {
       height: 25px;
     }
 
@@ -14,15 +14,15 @@
       color: #7a7a7a;
       border: 1.5px solid #6c85a2;
       border-radius: 15px;
-      padding: 0 10px ;
+      padding: 0 10px;
       font-size: $sub-text-large;
       cursor: pointer;
 
-      @include respond-to(middle){
+      @include respond-to(middle) {
         font-size: $sub-text-mobile;
       }
 
-      @include respond-to(mobile){
+      @include respond-to(mobile) {
         font-size: $sub-text-mobile;
       }
 
@@ -31,18 +31,47 @@
         outline: none;
         box-shadow: 0 0px 4px 1px #414141;
       }
+
       &::placeholder {
         color: #6c85a2;
       }
     }
 
 
-
-    &-select{
+    &-select {
       &-option {
         font-size: inherit;
       }
     }
 
-    }
   }
+
+}
+
+.yellow {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_yellow;
+
+  }
+
+}
+
+.gray {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_gray;
+
+  }
+}
+
+.red {
+  .header-container,
+  .todos__item,
+  .page-application__btn {
+    background-color: $theme-color_red;
+
+  }
+}

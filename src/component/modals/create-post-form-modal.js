@@ -12,10 +12,10 @@ export class CreatePostFormModal extends Component {
     init() {
         this.component.addEventListener('click', onCloseModalHandler.bind(this))
         this.createPostForm = this.component.firstElementChild
-        this.createPostForm.addEventListener('submit', onSubmitPostHandler.bind(this))
+        this.createPostForm.addEventListener('submit', onSubmitPostHandle.bind(this))
         this.formData = new Form(this.createPostForm, {
             title: [Validator.required],
-            description: [Validator.required],
+            description: [Validator.required]
         })
     }
 
@@ -27,20 +27,27 @@ export class CreatePostFormModal extends Component {
 function onCloseModalHandler(e) {
     const {target} = e
     const isBg = target === this.component
-    if (isBg) this.hide()
+    if (isBg) {
+        this.hide()
+    }
+
 
 }
 
-function onSubmitPostHandler(e) {
+function onSubmitPostHandle(e) {
     e.preventDefault()
     if (this.formData.isValid()) {
         const formData = {
             id: new Date().getTime(),
             ...this.formData.value(),
-            status: 'processing',
+            status: 'processing'
         }
         Storage.createPost(formData)
         this.hide()
         pageApplication.show()
+
+
+    } else {
+
     }
 }
